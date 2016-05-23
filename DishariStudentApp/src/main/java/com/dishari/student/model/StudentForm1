@@ -1,0 +1,157 @@
+package com.dishari.student.model;
+
+import java.util.Date;
+
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.Table;
+
+import org.hibernate.validator.constraints.NotEmpty;
+import org.springframework.stereotype.Repository;
+
+
+
+public class StudentForm{					
+	
+ 
+	private Long id;
+
+	private String familyName;
+
+	private String nickName;
+		
+
+	private String iname;
+	
+
+	private String group;
+	
+	
+	private String Class;
+	
+  
+	 
+	private String optionalSubject;
+	
+	
+	private String section;
+	
+
+	private String localGuardian;
+	
+
+	private String relationwithlocalGuardian;
+	
+		
+	private String classStart;
+	
+	
+	private String classroll;
+
+
+    private String fourthSubject;
+    
+	private String schooltime;
+  
+   private String classStartl;
+  
+   private String pec;
+   
+   private String jsc;
+   
+   private String ssc;
+   
+   private String localGuardianNumber;
+   
+   private String references;
+   
+   private String referralpersonName;
+   
+   private String referralmobileNumber;
+  
+   private String startDate;
+   
+   private String previousresult;
+    
+	private String motherName; 
+		
+	private String firstName;
+		
+	public String getFirstName() {
+		  return firstName;
+	}
+	
+	public void setFirstName(String firstName) {
+		this.firstName = firstName;
+	}
+	
+	public Long getId() {
+		return id;
+	}
+	
+	public void setId(Long id) {
+		this.id = id;
+	}
+
+	public String getMotherName() {
+		return motherName;
+	}
+
+	
+	public void setMotherName(String motherName) {
+		this.motherName = motherName;
+	}
+
+	private String fatherName;
+	
+	
+	private String fOccupation;
+	
+	private String mOccupation;
+	
+	
+	private String contactNumber;
+	
+	private String mobileNumber;
+	
+	private String persontype;
+	
+    private Date dob;
+    	
+	public Date getDob() {
+		return dob;
+	}
+
+	public void setDob(Date dob) {
+		this.dob = dob;
+	}
+  
+	private  String Gender;
+
+	  public String getFamilyName() {
+		   return familyName;
+	  }
+
+	  public String getGender() {
+		   return Gender;
+	    }
+
+       public void setGender(String gender) {
+		   Gender = gender;
+	    }
+
+	   public void setFamilyName(String familyName) {
+		      this.familyName = familyName;
+	    }
+
+	     public String getFatherName() {
+		       return fatherName;
+	    }
+	     
+	    public void setFatherName(String fatherName) {
+		        this.fatherName = fatherName;
+	    }
+}

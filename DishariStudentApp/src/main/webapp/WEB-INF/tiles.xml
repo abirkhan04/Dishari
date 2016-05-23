@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8" ?>  
+<!DOCTYPE tiles-definitions PUBLIC  
+       "-//Apache Software Foundation//DTD Tiles Configuration 3.0//EN"  
+       "http://tiles.apache.org/dtds/tiles-config_3_0.dtd">  
+<tiles-definitions>  
+ 
+    <!-- Base Define -->
+    <definition name="base.definition" 
+        template="/WEB-INF/layouts/classic.jsp">  
+        <put-attribute name="title" value="" />  
+        <put-attribute name="header" value="/WEB-INF/basefragments/_header.jsp" />  
+        <put-attribute name="menu" value="/WEB-INF/basefragments/_menu.jsp" />  
+        <put-attribute name="body" value="" /> 
+        <put-attribute name="form" value = "/WEB-INF/adminpages/_studentform.jsp"/> 
+        <put-attribute name="footer" value="/WEB-INF/basefragments/_footer.jsp" />  
+    </definition>  
+ 
+    <!-- Home Page -->
+    <definition name="homePage" extends="base.definition">  
+        <put-attribute name="title" value="Home Page" />  
+        <put-attribute name="body" value="/WEB-INF/bodyfragments/_home.jsp" />  
+    </definition> 
+    
+    
+    <definition name="adminhome" extends="base.definition">  
+         <put-attribute name="title" value="Dishari Admin Page"/>  
+         <put-attribute name="header" value= "/WEB-INF/adminpages/_adminheader.jsp"/> 
+         <put-attribute name="menu" value="/WEB-INF/bodyfragments/_sidebar.jsp" />    
+         <put-attribute name="body" value="/WEB-INF/adminpages/_adminstudentbody.jsp"/> 
+         <put-attribute name="footer" value=""/>              
+    </definition>  
+    
+    
+    <definition name="userhome" extends="base.definition">  
+        <put-attribute name="title" value="Dishari User Page"/>  
+        <put-attribute name="header" value= "/WEB-INF/userpages/_userheader.jsp" />   
+        <put-attribute name="body" value="/WEB-INF/userpages/_userbody.jsp"/> 
+        <put-attribute name="footer" value="" />              
+    </definition> 
+    
+     <definition name="studentadmission" extends="adminhome">  
+        <put-attribute name="title" value="Dishari Admin Page"/>  
+        <put-attribute name="header" value= "/WEB-INF/adminpages/_adminheader.jsp" />   
+        <put-attribute name="body" value="/WEB-INF/adminpages/_adminstudentbody.jsp"/> 
+        <put-attribute name="form" value = "/WEB-INF/adminpages/_studentform.jsp"/>
+        <put-attribute name="footer" value=""/>              
+    </definition>  
+          
+     <definition name="admissionform" extends="base.definition">  
+        <put-attribute name="title" value="Dishari Admin Page"/>    
+        <put-attribute name="body" value="/WEB-INF/bodyfragments/_admissionform.jsp"/> 
+        <put-attribute name="footer" value=""/>              
+    </definition>  
+        
+    <definition name="contactusPage" extends="base.definition">  
+        <put-attribute name="title" value="Contact Us" />  
+        <put-attribute name="body" value="/WEB-INF/bodyfragments/_contactus.jsp" />  
+    </definition>
+    
+    <definition name="classmanagement" extends="base.definition">  
+        <put-attribute name="title" value="Class Management"/>  
+        <put-attribute name="header" value= "/WEB-INF/adminpages/_adminheader.jsp"/> 
+        <put-attribute name="menu" value="/WEB-INF/bodyfragments/_sidebarclassmanagement.jsp" /> 
+<!--         <put-attribute name="body" value="/WEB-INF/bodyfragments/_classmanagement.jsp" />   -->
+        <put-attribute name="body" value="/WEB-INF/bodyfragments/_classmanagement.jsp" /> 
+        <put-attribute name="footer" value="" />  
+    </definition>
+    
+    <definition name="teachermanagement" extends="base.definition">
+       <put-attribute name="title" value="Teacher Management"/>  
+       <put-attribute name="header" value= "/WEB-INF/adminpages/_adminheader.jsp"/>
+       <put-attribute name="menu" value="/WEB-INF/bodyfragments/_sidebarteachermanagement.jsp" /> 
+       <put-attribute name="body" value="/WEB-INF/bodyfragments/_teachermanagement.jsp"/>
+       <put-attribute name="footer" value=""/>
+    </definition>
+        
+</tiles-definitions> 
